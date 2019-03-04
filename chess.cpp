@@ -4,7 +4,7 @@ int main()
 {
    int x[32],y[32];
    for(int i=0;i<32;i++)
-      x[i-1]=8-i%8;
+      x[i]=8-i%8;
    for(int i=0;i<4;i++)
       for(int j=0;j<8;j++)
          if(i==0)
@@ -15,9 +15,9 @@ int main()
             y[i*8+j]=2;
          else if(i==3)
             y[i*8+j]=1;
-   for(int i=0;i<8;i++)
+   for(int i=0;i<9;i++)
    { 
-      for(int j=0;j<8;j++) 
+      for(int j=0;j<9;j++) 
       {  
          if(((y[0]==i)&&(x[0]==j))||((y[7]==i)&&(x[7]==j)))
             {cout<<"r "; continue;}
@@ -45,8 +45,8 @@ int main()
             {cout<<"Q "; continue;}
          if((y[28]==i)&&(x[28]==j))
             {cout<<"K "; continue;}
-         cout<<"  "; 
       }
+      cout<<"\n";
    }
    return 0;
 }

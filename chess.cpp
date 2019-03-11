@@ -15,8 +15,11 @@ int main()
             y[i*8+j]=2;
          else if(i==3)
             y[i*8+j]=1;
-   for(int i=0;i<9;i++)
-   { 
+   for(int i=8;i>=0;i--)
+   {
+	  if(i!=0)
+	  { 
+	   cout<<i<<" ";
       for(int j=0;j<9;j++) 
       {  
          if(((y[0]==i)&&(x[0]==j))||((y[7]==i)&&(x[7]==j)))
@@ -47,6 +50,8 @@ int main()
             {cout<<"K "; continue;}
       }
       cout<<"\n";
+	  }
+	  else cout<<"  a b c d e f g h\n";
    }
    return 0;
 }
